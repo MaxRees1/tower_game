@@ -5,29 +5,28 @@ English | [简体中文](./README.zh-CN.md)
 <h1 align="center">Tower Building Game</h1>
 <p align="center"><img src="https://o2qq673j2.qnssl.com/tower-loading.gif"/></p>
 
-> a tower building game based on ES6 and Canvas (Tower Bloxx Deluxe Skyscraper)
+> A tower building game based on ES6 and Canvas (Tower Bloxx Deluxe Skyscraper).
 
 ## Demo
 <p align="center"><img src="https://user-images.githubusercontent.com/17680888/47480922-93a20c00-d864-11e8-8f7c-6d1d60184730.gif"/></p>
 <h2 align="center"><a href="https://iamkun.github.io/tower_game">Link to online Demo (Demo Link)</a></h2>
-<h4 align="center">Mobile Devices can scan following QR code:</h4>
+<h4 align="center">Mobile Devices can scan the following QR code:</h4>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/17680888/47480646-abc55b80-d863-11e8-9337-4ea768ebe55d.png" />
 </p>
 
-## Game Rule
+## Game Rules
 
-The following are the default game rule:
+The following are the default game rules:
 
-- In every game player starts with 3 hp. Every time a Tower block is dropped player is deduct 1 hp; game ends when hp is depleted.
+- In each game, the player starts with 3 hp. Every time a Tower block is dropped, the player is deducted 1 hp. The game ends when hp is depleted.
 
-- Player is rewarded with 25 point for every succesful stacked blocks(Success). If a block is stacked pefectly (Perfect) on top of the previous one, then player
-rewarded with 50 points instead. Consecutive Perfects awards additional 25 points.
+- The player is rewarded with 25 points for every succesfully stacked block ('Success'). If a block is stacked pefectly ('Perfect') on top of the previous one, then the player is rewarded with 50 points instead. Consecutive 'Perfects' award an additional 25 points each time.
 
 **Note: Each Success or Perfect constitutes a floor**
 
-  For example, the first Perfect awards 50 point. The second consecutive Perfect awards 75 points.
- The third consecutive Perfect awards 100 points.  etc.
+  For example, the first 'Perfect' awards 50 points. The second consecutive 'Perfect' awards 75 points.
+ The third consecutive Perfect awards 100 points, etc.
 
 <p align="center">
   <img width="550" src="https://user-images.githubusercontent.com/17680888/47473105-d9021180-d843-11e8-8c19-b6b78d86cbdf.png" />
@@ -43,8 +42,8 @@ npm start
 ```
 Open `http://localhost:8082` in a web browser.
 
-- To customize image and sound resource files directly replace the corresponding file under `assets` directory.
-- To customize game rules modify the `option` object in `index.html`.
+- To customize image and sound resource files directly, replace the corresponding file under `assets` directory.
+- To customize game rules, modify the `option` object in `index.html`.
 
 ## Option
 
@@ -64,8 +63,8 @@ Use following table of `option` constants to complete customization of game rule
 | <a href="#hookangle">hookAngle</a> | function | Angle of hook |
 | <a href="#landblockspeed">landBlockSpeed</a> | function | Speed of block sway |
 | <a href="#setgamescore">setGameScore</a> | function | hook for current score |
-| <a href="#setgamesuccess">setGameSuccess</a> | function | hook for number of current succesful game |
-| <a href="#setgamefailed">setGameFailed</a> | function | hook for number of current failed game |
+| <a href="#setgamesuccess">setGameSuccess</a> | function | hook for number of current succesful games |
+| <a href="#setgamefailed">setGameFailed</a> | function | hook for number of current failed games |
 
 #### hookSpeed
 Speed of hook's movement
@@ -77,7 +76,7 @@ function(currentFloor, currentScore) {
 ```
 
 #### hookAngle
-Angle of hook
+Angle of hook:
 This function takes in two parameters, currentFloor and currentScore, and returns a angle value.
 ```
 function(currentFloor, currentScore) {
@@ -86,7 +85,7 @@ function(currentFloor, currentScore) {
 ```
 
 #### landBlockSpeed
-Speed of block sway
+Speed of block sway:
 This function takes in two parameters, currentFloor and currentScore, and returns a speed value.
 ```
 function(currentFloor, currentScore) {
@@ -95,8 +94,8 @@ function(currentFloor, currentScore) {
 ```
 
 #### setGameScore
-hook for current score
-This function takes in one parameters, score, and sets currentScore to score.
+hook for current score:
+This function takes in one parameter, score, and sets currentScore to score.
 ```
 function(score) {
   // your logic
@@ -104,8 +103,8 @@ function(score) {
 ```
 
 #### setGameSuccess
-hook for number of current succesful game
-This function takes in one parameters, score, and sets GameSuccess to successCount.
+hook for number of current succesful game:
+This function takes in one parameter, score, and sets GameSuccess to successCount.
 ```
 function(successCount) {
   // your logic
@@ -113,8 +112,8 @@ function(successCount) {
 ```
 
 #### setGameFailed
-hook for number of current failed game
-This function takes in one parameters, score, and sets GameFailed to failedCount.
+hook for number of current failed games:
+This function takes in one parameter, score, and sets GameFailed to failedCount.
 ```
 function(failedCount) {
   // your logic
